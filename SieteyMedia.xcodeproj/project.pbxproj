@@ -13,6 +13,8 @@
 		EFBE21952AED3548005A2D28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFBE21932AED3548005A2D28 /* Main.storyboard */; };
 		EFBE21972AED354B005A2D28 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFBE21962AED354B005A2D28 /* Assets.xcassets */; };
 		EFBE219A2AED354B005A2D28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFBE21982AED354B005A2D28 /* LaunchScreen.storyboard */; };
+		EFE26DF02AED43F80019248F /* ClasesBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE26DEF2AED43F80019248F /* ClasesBase.swift */; };
+		EFE26DF72AED657C0019248F /* Juego.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFE26DF62AED657B0019248F /* Juego.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,8 +26,9 @@
 		EFBE21962AED354B005A2D28 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EFBE21992AED354B005A2D28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EFBE219B2AED354B005A2D28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EFE26DEC2AED3B480019248F /* NotificacionesLocales.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = NotificacionesLocales.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		EFE26DED2AED3B6B0019248F /* UIKit.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = UIKit.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		EFE26DEF2AED43F80019248F /* ClasesBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClasesBase.swift; sourceTree = "<group>"; };
+		EFE26DF52AED468E0019248F /* demo miniproyecto.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "demo miniproyecto.playground"; sourceTree = "<group>"; };
+		EFE26DF62AED657B0019248F /* Juego.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Juego.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +61,7 @@
 		EFBE218C2AED3548005A2D28 /* SieteyMedia */ = {
 			isa = PBXGroup;
 			children = (
-				EFE26DE72AED39EA0019248F /* modelo */,
+				EFE26DF42AED467D0019248F /* modelo */,
 				EFBE218D2AED3548005A2D28 /* AppDelegate.swift */,
 				EFBE218F2AED3548005A2D28 /* SceneDelegate.swift */,
 				EFBE21912AED3548005A2D28 /* ViewController.swift */,
@@ -70,11 +73,12 @@
 			path = SieteyMedia;
 			sourceTree = "<group>";
 		};
-		EFE26DE72AED39EA0019248F /* modelo */ = {
+		EFE26DF42AED467D0019248F /* modelo */ = {
 			isa = PBXGroup;
 			children = (
-				EFE26DEC2AED3B480019248F /* NotificacionesLocales.playground */,
-				EFE26DED2AED3B6B0019248F /* UIKit.playground */,
+				EFE26DF62AED657B0019248F /* Juego.swift */,
+				EFE26DEF2AED43F80019248F /* ClasesBase.swift */,
+				EFE26DF52AED468E0019248F /* demo miniproyecto.playground */,
 			);
 			path = modelo;
 			sourceTree = "<group>";
@@ -151,8 +155,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EFBE21922AED3548005A2D28 /* ViewController.swift in Sources */,
+				EFE26DF02AED43F80019248F /* ClasesBase.swift in Sources */,
 				EFBE218E2AED3548005A2D28 /* AppDelegate.swift in Sources */,
 				EFBE21902AED3548005A2D28 /* SceneDelegate.swift in Sources */,
+				EFE26DF72AED657C0019248F /* Juego.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
