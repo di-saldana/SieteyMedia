@@ -30,9 +30,13 @@ class Baraja {
     init() {
         for palo in Palo.allCases {
             for valor in 1...7 {
-                cartas.append(Carta(valor: valor, palo: palo) ?? <#default value#>)
+                if let carta = Carta(valor: valor, palo: palo) {
+                    cartas.append(carta)
+                }
             }
-            cartas.append(Carta(valor: 0, palo: palo) ?? <#default value#>) // Cartas especiales
+            if let cartaEspecial = Carta(valor: 0, palo: palo) {
+                cartas.append(cartaEspecial)
+            }
         }
     }
 
@@ -107,7 +111,6 @@ class Mano {
 }
 
 
-
 // Programa principal
 // Como "programa principal" para probar las clases anteriores puedes ejecutar este código. Si todo es correcto deberían aparecer en pantalla las tres cartas añadidas a la mano
 
@@ -127,4 +130,3 @@ class Mano {
 //        print(carta.descripcion())
 //    }
 //}
-
