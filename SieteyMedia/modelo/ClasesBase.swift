@@ -34,6 +34,11 @@ class Baraja {
                     cartas.append(carta)
                 }
             }
+            for valor in 10...12 {
+                if let carta = Carta(valor: valor, palo: palo) {
+                    cartas.append(carta)
+                }
+            } 
             if let cartaEspecial = Carta(valor: 0, palo: palo) {
                 cartas.append(cartaEspecial)
             }
