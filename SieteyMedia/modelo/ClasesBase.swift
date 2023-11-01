@@ -38,9 +38,6 @@ class Baraja {
                 if let carta = Carta(valor: valor, palo: palo) {
                     cartas.append(carta)
                 }
-            } 
-            if let cartaEspecial = Carta(valor: 0, palo: palo) {
-                cartas.append(cartaEspecial)
             }
         }
     }
