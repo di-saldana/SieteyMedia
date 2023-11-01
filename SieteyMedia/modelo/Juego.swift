@@ -25,7 +25,7 @@ class Juego {
         self.estado = .turnoJugador
     }
     
-    //LLamar a este método cuando se pulse el botón de "Pedir carta"
+    //Llamar a este método cuando se pulse el botón de "Pedir carta"
     func jugadorPideCarta() -> EstadoJuego {
         if let pedida = self.baraja.repartirCarta() {
             print("Sacas \(pedida.descripcion())")
@@ -39,7 +39,7 @@ class Juego {
         return self.estado
     }
     
-    //LLamar a este método cuando se pulse el botón de "Plantarse"
+    //Llamar a este método cuando se pulse el botón de "Plantarse"
     func jugadorSePlanta() -> EstadoJuego {
         acabarPartida()
         return self.estado

@@ -2,7 +2,7 @@
 import UIKit
 import PlaygroundSupport
 
-//inicializar la parte gráfica para el plaground
+//inicializar la parte gráfica para el playground
 //ESTO NO HAY QUE HACERLO EN UNA APP NORMAL
 let vc = UIViewController()
 PlaygroundPage.current.liveView = vc

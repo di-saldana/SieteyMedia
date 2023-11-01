@@ -17,9 +17,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7qQ-tv-mTs">
-                                <rect key="frame" x="119" y="322" width="152" height="55"/>
+                                <rect key="frame" x="119" y="626" width="152" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="Kgo-Ey-YLo"/>
+                                    <constraint firstAttribute="height" constant="55" id="vg7-qo-KYp"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Plantarse"/>
@@ -28,9 +28,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ElM-X8-JEb">
-                                <rect key="frame" x="119" y="242" width="152" height="55"/>
+                                <rect key="frame" x="119" y="546" width="152" height="55"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="55" id="DSE-uK-2I7"/>
+                                    <constraint firstAttribute="height" constant="55" id="r71-Tp-tXS"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Pedir carta"/>
@@ -39,7 +39,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mh9-Ry-bK7">
-                                <rect key="frame" x="119" y="402" width="152" height="55"/>
+                                <rect key="frame" x="119" y="706" width="152" height="55"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Nueva partida"/>
                                 <connections>
@@ -50,16 +50,16 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ElM-X8-JEb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0vh-H7-ouD"/>
-                            <constraint firstItem="7qQ-tv-mTs" firstAttribute="trailing" secondItem="mh9-Ry-bK7" secondAttribute="trailing" id="4Ie-rn-mB6"/>
-                            <constraint firstItem="ElM-X8-JEb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="119" id="B4p-7S-pq7"/>
-                            <constraint firstItem="ElM-X8-JEb" firstAttribute="leading" secondItem="7qQ-tv-mTs" secondAttribute="leading" id="ODe-mV-q48"/>
-                            <constraint firstItem="mh9-Ry-bK7" firstAttribute="top" secondItem="7qQ-tv-mTs" secondAttribute="bottom" constant="25" id="Ozh-zf-Hmx"/>
-                            <constraint firstItem="ElM-X8-JEb" firstAttribute="trailing" secondItem="7qQ-tv-mTs" secondAttribute="trailing" id="UYU-C6-fLy"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mh9-Ry-bK7" secondAttribute="bottom" constant="353" id="Vxv-U7-6Ik"/>
-                            <constraint firstItem="ElM-X8-JEb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="198" id="e4U-v4-7d8"/>
-                            <constraint firstItem="7qQ-tv-mTs" firstAttribute="leading" secondItem="mh9-Ry-bK7" secondAttribute="leading" id="o0h-KR-9Gx"/>
-                            <constraint firstItem="7qQ-tv-mTs" firstAttribute="top" secondItem="ElM-X8-JEb" secondAttribute="bottom" constant="25" id="qBQ-Ua-pgy"/>
+                            <constraint firstItem="ElM-X8-JEb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="119" id="6Ou-4U-4bW"/>
+                            <constraint firstItem="mh9-Ry-bK7" firstAttribute="top" secondItem="7qQ-tv-mTs" secondAttribute="bottom" constant="25" id="WYV-SF-bUk"/>
+                            <constraint firstItem="ElM-X8-JEb" firstAttribute="trailing" secondItem="7qQ-tv-mTs" secondAttribute="trailing" id="XJ5-AS-dwo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mh9-Ry-bK7" secondAttribute="bottom" constant="49" id="Y3d-Fa-1uB"/>
+                            <constraint firstItem="ElM-X8-JEb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZCt-MY-8BX"/>
+                            <constraint firstItem="ElM-X8-JEb" firstAttribute="leading" secondItem="7qQ-tv-mTs" secondAttribute="leading" id="byJ-0l-FRn"/>
+                            <constraint firstItem="7qQ-tv-mTs" firstAttribute="leading" secondItem="mh9-Ry-bK7" secondAttribute="leading" id="lub-1u-8Tg"/>
+                            <constraint firstItem="ElM-X8-JEb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="502" id="vXS-FC-Sjy"/>
+                            <constraint firstItem="7qQ-tv-mTs" firstAttribute="top" secondItem="ElM-X8-JEb" secondAttribute="bottom" constant="25" id="vzp-vU-TEP"/>
+                            <constraint firstItem="7qQ-tv-mTs" firstAttribute="trailing" secondItem="mh9-Ry-bK7" secondAttribute="trailing" id="zXc-Nw-I0X"/>
                         </constraints>
                     </view>
                 </viewController>
