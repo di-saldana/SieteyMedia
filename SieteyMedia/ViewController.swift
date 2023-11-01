@@ -14,7 +14,12 @@ class ViewController: UIViewController {
     
     // Counter para ir rotando posición de carta dibujada en x
     var rotationCount : Int = 40
-
+    
+    @IBOutlet weak var pedirCartaButton: UIButton!
+    @IBOutlet weak var plantarseButton: UIButton!
+    @IBOutlet weak var nuevaPartidaButton: UIButton!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -34,12 +39,61 @@ class ViewController: UIViewController {
         imagenView.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
 
         self.view.addSubview(imagenView)
+        
+        viewsCartas.append(imagenView)
 
         UIView.animate(withDuration: 1) {
             imagenView.frame = CGRect(x:self.rotationCount, y:100, width: 100, height: 150)
             imagenView.transform = CGAffineTransform(rotationAngle: CGFloat(0));
         }
-        self.rotationCount += 40 // Update de counter
+        self.rotationCount += 40 // Update el counter
+    }
+    
+    func eliminarCartas() {
+        for v in self.viewsCartas {
+            v.removeFromSuperview()
+        }
+        //ya no tenemos imágenes de cartas en pantalla, ponemos el array a vacío
+        self.viewsCartas=[]
+        self.rotationCount = 40
+    }
+    
+    func manejadorAlertas() {
+        var titleAlerta = ""
+        var messageAlerta = ""
+        let estado: EstadoJuego = juego.estado
+        
+        switch estado {
+        case .ganaJugador:
+            titleAlerta = "Fin del juego"
+            messageAlerta = "¡¡Has ganado!!"
+        case .sepasaJugador:
+            titleAlerta = "Fin del juego"
+            messageAlerta = "¡¡Te has pasado!!"
+        case .pierdeJugador:
+            titleAlerta = "Fin del juego"
+            messageAlerta = "¡¡Has perdido!!"
+        case .empate:
+            titleAlerta = "Fin del juego"
+            messageAlerta = "¡¡Has empatado!!"
+        case .noIniciado, .turnoJugador:
+            return
+        }
+        
+        let alert = UIAlertController(
+            title: titleAlerta,
+            message: messageAlerta,
+            preferredStyle: UIAlertController.Style.alert)
+        let action = UIAlertAction(
+            title: "OK",
+            style: UIAlertAction.Style.default){ (action) in
+                // handle response here.
+                self.eliminarCartas()
+                self.pedirCartaButton.isEnabled = false
+                self.plantarseButton.isEnabled = false
+            }
+        alert.addAction(action)
+        self.present(alert, animated: true, completion: nil)
     }
     
     @IBAction func pedirCarta(_ sender: UIButton) {
@@ -50,17 +104,28 @@ class ViewController: UIViewController {
         if let carta = juego.manoJugador.cartas.last {
             dibujarCarta(carta: carta)
         }
+        
+        manejadorAlertas()
     }
     
     @IBAction func plantarse(_ sender: UIButton) {
         let estado = juego.jugadorSePlanta()
         print(estado)
+        
+        manejadorAlertas()
     }
 
     @IBAction func nuevaPartida(_ sender: UIButton) {
         juego = Juego()
         juego.turnoMaquina()
         print(juego.estado)
+        
+        self.pedirCartaButton.isEnabled = true
+        self.plantarseButton.isEnabled = true
+        
+        if !juego.baraja.cartas.isEmpty {
+            eliminarCartas()
+        }
     }
     
 }
