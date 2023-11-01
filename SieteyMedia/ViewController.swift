@@ -47,10 +47,10 @@ class ViewController: UIViewController {
             imagenView.frame = CGRect(x:self.rotationCountX, y:self.rotationCountY, width: 100, height: 150)
             imagenView.transform = CGAffineTransform(rotationAngle: CGFloat(0));
         }
-        self.rotationCountX += 40 // Update el counter
+        self.rotationCountX += 50 // Update el counter
         
-        // si hay mas de 6 cartas en una linea las acomoda abajo
-        if viewsCartas.count % 6 == 0 {
+        // si hay mas de 5 cartas en una linea las acomoda abajo
+        if viewsCartas.count % 5 == 0 {
             self.rotationCountX = 45
             self.rotationCountY += 100
         }
