@@ -7,9 +7,6 @@
 import Foundation
 import UIKit
 
-// Ejercicios adicionales de Swift Básico (1.5 puntos)
-// Baraja Espanola: https://www.salonhogar.net/Enciclopedia/Baraja_espanola/Indice.htm
-
 
 // Enumerado Palo (0.25 puntos)
 // Un enum para representar los cuatro palos de la baraja. Recuerda que son bastos, copas, espadas y oros. Haz que sea internamente un String (: String), así su propiedad .rawValue será una cadena y podrás mostrar el nombre del palo
@@ -22,33 +19,6 @@ enum EstadoJuego {
     //pierdeJugador sería que pierde porque la máquina está más cerca del 7.5
     //sepasaJugador sería que pierde porque se ha pasado
     case noIniciado, turnoJugador, ganaJugador, sepasaJugador, pierdeJugador, empate
-}
-
-class Baraja {
-    var cartas: [Carta] = []
-
-    init() {
-        for palo in Palo.allCases {
-            for valor in 1...7 {
-                if let carta = Carta(valor: valor, palo: palo) {
-                    cartas.append(carta)
-                }
-            }
-            for valor in 10...12 {
-                if let carta = Carta(valor: valor, palo: palo) {
-                    cartas.append(carta)
-                }
-            }
-        }
-    }
-
-    func barajar() {
-        cartas.shuffle()
-    }
-
-    func repartirCarta() -> Carta? {
-        return cartas.popLast()
-    }
 }
 
 
@@ -113,22 +83,30 @@ class Mano {
 }
 
 
-// Programa principal
-// Como "programa principal" para probar las clases anteriores puedes ejecutar este código. Si todo es correcto deberían aparecer en pantalla las tres cartas añadidas a la mano
+// Clase Baraja
+// Representa a todas las cartas de la baraja. Del 1 al 12 de los cuatro palos, menos 8 y 9.
 
-//var mano = Mano()
-//
-//var carta1 = Carta(valor: 1, palo: .oros)!
-//var carta2 = Carta(valor: 10, palo: .espadas)!
-//var carta3 = Carta(valor: 7, palo: .copas)!
-//
-//mano.addCarta(carta: carta1)
-//mano.addCarta(carta: carta2)
-//mano.addCarta(carta: carta3)
-//print("Hay \(mano.tamano) cartas")
-//
-//for num in 0..<mano.tamano {
-//    if let carta = mano.getCarta(pos:num) {
-//        print(carta.descripcion())
-//    }
-//}
+class Baraja {
+    var cartas: [Carta] = []
+
+    init() {
+        for palo in [Palo.bastos, Palo.espadas, Palo.copas, Palo.oros] {
+            for valor in 1...12 {
+                if valor != 8 && valor != 9 {  //El 8 y el 9 no se suelen usar
+                    //Aquí crearíais la nueva carta y la añadiríais al array "cartas"
+                    let carta = Carta(valor: valor, palo: palo)!
+                    cartas.append(carta)
+                }
+            }
+        }
+    }
+
+    func repartirCarta() -> Carta? {
+        return cartas.popLast()
+    }
+    
+    func barajar() {
+        cartas.shuffle()
+    }
+
+}
