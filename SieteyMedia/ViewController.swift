@@ -35,7 +35,13 @@ class ViewController: UIViewController {
 
         let imagen = UIImage(named: img)
         let imagenView = UIImageView(image: imagen)
-        imagenView.frame = CGRect(x:-200,y:-200,width: 200, height: 300)
+        
+        // Dimensiones relativas al tamaño de la pantalla
+        let limitesPantalla = UIScreen.main.bounds
+        let anchoRelativo = limitesPantalla.width * 0.2
+        let altoRelativo = limitesPantalla.height * 0.3
+
+        imagenView.frame = CGRect(x: -200, y: -200, width: anchoRelativo, height: altoRelativo)
         //La rotamos, para que al "repartirla" haga un efecto de giro
         imagenView.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi))
 
@@ -54,7 +60,6 @@ class ViewController: UIViewController {
             self.rotationCountX = 45
             self.rotationCountY += 100
         }
-        // TODO: Check edge case en que salen todas las cartas de 10, 11 y 12
     }
     
     func eliminarCartas() {
